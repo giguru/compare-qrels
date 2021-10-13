@@ -5,7 +5,7 @@ import json, pandas, pytrec_eval, logging, os
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-__all__ = ['CompareData', 'compare_qrels_sample_data']
+__all__ = ['CompareData', 'compute_qrels_df']
 
 logger = logging.getLogger(__name__)
 DELTA = u'Δ'
@@ -14,10 +14,10 @@ DELTA = u'Δ'
 pandas.set_option('display.max_columns', None)
 pandas.set_option('display.width', 1000)
 
-
 one = lambda x: f"{x}_1"
 two = lambda x: f"{x}_2"
 combined = lambda x: f"{x}_combined"
+
 
 @dataclass
 class CompareData:

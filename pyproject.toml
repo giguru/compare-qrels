@@ -1,0 +1,10 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "pytrec-eval",
+    "datasets",
+    "pandas",
+    "matplotlib"
+]
+build-backend = "setuptools.build_meta"
